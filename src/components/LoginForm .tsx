@@ -12,7 +12,6 @@ interface LoginFormProps {
     mode: 'login' | 'register';
     handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
-
 const LoginForm = ({ formData, mode, handleInputChange }: LoginFormProps) => {
     return (
         <DialogContent>

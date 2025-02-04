@@ -1,12 +1,8 @@
 import axios, { AxiosError } from 'axios';
 const BASE_URL = 'http://localhost:3000/api';
 interface UserData {
-    email: string; password: string; firstName: string; lastName: string; address: string; phone: string;
-}
-interface ApiError {
-    message: string;
-    code: string;
-}
+    email: string; password: string; firstName: string; lastName: string; address: string; phone: string;}
+interface ApiError { message: string;code: string;}
 const getErrorMessage = (error: AxiosError): string => {
     if (error.response?.status === 401) {
         return 'Invalid email or password. Please try again.';
@@ -77,37 +73,25 @@ export const api = {
                 },
                 {
                     headers: {
-                        'user-id': userId.toString()
-                    }
-                });
+                        'user-id': userId.toString() } });
             return {
                 ...registerResponse.data,
                 user: {
                     ...updateResponse.data,
                     id: userId,
-                    email: userData.email
-                }
-            };
+                    email: userData.email}};
         } catch (error) {
             const err = error as AxiosError;
-            throw new Error(getErrorMessage(err));
-        }
-    },
+            throw new Error(getErrorMessage(err)); }  },
     updateUser: async (userData: Omit<UserData, 'password'>, userId: number) => {
         try {
             const response = await axios.put(`${BASE_URL}/user`, userData, {
                 headers: {
-                    'user-id': userId.toString()
-                }
-            });
+                    'user-id': userId.toString()} });
             return {
                 ...response.data,
                 id: userId,
-                email: userData.email
-            };
+                email: userData.email};
         } catch (error) {
             const err = error as AxiosError;
-            throw new Error(getErrorMessage(err));
-        }
-    }
-};
+            throw new Error(getErrorMessage(err));}}};

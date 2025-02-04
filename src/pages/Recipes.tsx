@@ -22,11 +22,9 @@ const Recipes = () => {
     const navigate = useNavigate();
     const { recipes, selectedRecipe, loading, error } = useSelector((state: RootState) => state.recipes);
     const { state: { isAuthenticated } } = useUserContext();
-
     useEffect(() => {
         dispatch(fetchRecipes());
     }, [dispatch]);
-
     if (loading) {
         return (
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -34,7 +32,6 @@ const Recipes = () => {
             </Box>
         );
     }
-
     if (error) {
         return (
             <Box sx={{ p: 3 }}>
@@ -42,7 +39,6 @@ const Recipes = () => {
             </Box>
         );
     }
-
     return (
         <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
             <Box sx={{ 
@@ -65,7 +61,6 @@ const Recipes = () => {
                     </Button>
                 )}
             </Box>
-
             <Box sx={{ display: 'flex', gap: 4 }}>
                 <Paper elevation={2} sx={{ width: '30%', maxHeight: '70vh', overflow: 'auto' }}>
                     <List>
@@ -81,7 +76,6 @@ const Recipes = () => {
                         ))}
                     </List>
                 </Paper>
-
                 <Paper elevation={2} sx={{ width: '70%', maxHeight: '70vh', overflow: 'auto' }}>
                     {selectedRecipe ? (
                         <RecipeDetail recipe={selectedRecipe} />

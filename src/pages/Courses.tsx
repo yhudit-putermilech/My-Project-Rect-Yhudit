@@ -12,15 +12,12 @@ const Courses = () => {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, mt: 4 }}>
-      {/* כותרת */}
       <Paper elevation={3} sx={{ p: 4, borderRadius: 3, textAlign: 'center', width: '80%', maxWidth: 800 }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
           <EventNoteIcon sx={{ fontSize: 60, mb: 2 }} />
           <Typography variant="h3" fontWeight="bold">הקורסים שלנו</Typography>
         </Box>
       </Paper>
-
-      {/* רשימת הקורסים */}
       <Grid container spacing={3} justifyContent="center">
         {courses.map((course) => (
           <Grid item key={course.id} xs={12} sm={6} md={4}>
@@ -34,7 +31,7 @@ const Courses = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 textAlign: "center",
-                backgroundImage: `url(${course.image})`, // תמונה שונה לכל כרטיס
+                backgroundImage: `url(${course.image})`, 
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 color: "white",

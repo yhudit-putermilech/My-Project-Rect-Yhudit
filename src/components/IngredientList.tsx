@@ -9,7 +9,6 @@ interface IngredientListProps {
   watch: UseFormWatch<any>;
   error?: string;
 }
-
 const IngredientList = ({ ingredients, setIngredients, register, watch, error }: IngredientListProps) => {
   const [ingredientsError, setIngredientsError] = useState<string>('');
   const newIngredient = watch('newIngredient');
