@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useUserContext } from "../context/UserContext";
 import { Avatar } from "@mui/material";
 import UpdateUserForm from "./UpdateUserForm";
-//פונקציה שמחזירה צבע מיוחד לכל שם
 function stringToColor(string: string) {
     let hash = 0;
     let i;
@@ -17,7 +16,6 @@ function stringToColor(string: string) {
     return color;
 
 }
-//Avatar פונקציה שעושה
 const UserProfile = () => {
     const { state: { user } } = useUserContext();
     const [isEditOpen, setIsEditOpen] = useState(false);

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { TextField, Button, List, ListItem, ListItemText, IconButton, Box } from '@mui/material';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { UseFormRegister, UseFormWatch } from 'react-hook-form';
-//הוספת רכיבים למתכון
 interface IngredientListProps {
   ingredients: string[];
   setIngredients: (ingredients: string[]) => void;
@@ -26,7 +25,6 @@ const IngredientList = ({ ingredients, setIngredients, register, watch, error }:
         return;
       }
       setIngredients([...ingredients, newIngredient.trim()]);
-      // Clear the input field by setting its value to empty string
       const input = document.querySelector('input[name="newIngredient"]') as HTMLInputElement;
       if (input) {
         input.value = '';

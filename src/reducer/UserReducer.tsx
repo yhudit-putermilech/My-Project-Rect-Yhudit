@@ -1,4 +1,3 @@
-//ניהול מצב של המערכת
 export interface User {
     id?: number;
     firstName: string;

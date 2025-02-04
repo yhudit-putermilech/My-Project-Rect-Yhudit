@@ -4,7 +4,6 @@ import { api } from "../services/api";
 import { Button, Dialog, DialogTitle, Alert } from "@mui/material";
 import LoginForm from "./LoginForm ";
 import LoginDialogActions from "./LoginDialogActions ";
-//תהליך התחברות לאתר
 const Login = () => {
     const { dispatch } = useUserContext();
     const [mode, setMode] = useState<'login' | 'register'>('login');

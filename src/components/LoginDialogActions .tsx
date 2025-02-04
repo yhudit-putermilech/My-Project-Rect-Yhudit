@@ -1,5 +1,4 @@
 import { Button, DialogActions } from "@mui/material";
-//פונקציה של תהליך הרישום עצמו
 interface LoginDialogActionsProps {
     mode: 'login' | 'register';
     loading: boolean;

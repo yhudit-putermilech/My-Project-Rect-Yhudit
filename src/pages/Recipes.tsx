@@ -17,7 +17,6 @@ import { AppDispatch, RootState } from '../store/store';
 import { fetchRecipes, selectRecipe } from '../store/recipeSlice';
 import { useUserContext } from '../context/UserContext';
 import RecipeDetail from '../components/RecipeDetail';
-//דף של רשימת התמכונים
 const Recipes = () => {
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
@@ -98,5 +97,4 @@ const Recipes = () => {
         </Paper>
     );
 };
-
 export default Recipes;

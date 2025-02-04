@@ -1,6 +1,5 @@
 import React from "react";
 import { TextField, Stack, DialogContent } from "@mui/material";
-//Login של משתמש
 interface LoginFormProps {
     formData: {
         email: string;

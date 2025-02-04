@@ -9,15 +9,15 @@ const About = () => {
             'orange', 'pink', 'cyan', 'magenta', 'lime', 
             'brown', 'teal', 'navy', 'violet', 'gold', 
             'silver', 'black', 'indigo', 'coral'
-        ]; // מערך עם 20 צבעים
+        ];    
         let index = 0;
 
         const interval = setInterval(() => {
             setColor(colors[index]);
             index = (index + 1) % colors.length;
-        }, 500); // שינוי צבע כל חצי שנייה
+        }, 500); 
 
-        return () => clearInterval(interval); // ניקוי ה-interval כשקומפוננטה מתנתקת
+        return () => clearInterval(interval);  
     }, []);
 
     return (

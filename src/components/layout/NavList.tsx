@@ -7,7 +7,6 @@ import {
     Add as AddIcon
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-//פרטי ניוט לגולש
 interface NavListProps {
     isAuthenticated: boolean;
 }

@@ -11,7 +11,6 @@ import { fetchRecipes } from '../store/recipeSlice';
 import { useUserContext } from '../context/UserContext';
 import axios from 'axios';
 import RecipeForm from '../components/RecipeForm';
-//מוסיף מתכון חדש לאתר
 const recipeSchema = yup.object().shape({
   title: yup
     .string()
