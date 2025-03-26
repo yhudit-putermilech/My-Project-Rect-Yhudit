@@ -1,10 +1,12 @@
 import { List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import CollectionsIcon from '@mui/icons-material/Collections';
+import TheatersIcon from '@mui/icons-material/Theaters';
 import { 
+    Collections,
     Home as HomeIcon, 
-    Info as InfoIcon, 
-    School as SchoolIcon, 
-    Restaurant as RecipeIcon,
-    Add as AddIcon
+    Info as InfoIcon,
+    Add as AddIcon,
+    Theaters, 
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 interface NavListProps {
@@ -17,8 +19,8 @@ const NavList = ({ isAuthenticated }: NavListProps) => {
     const navItems = [
         { path: '/', icon: <HomeIcon sx={{ mr: 1 }} />, label: 'Home' },
         { path: '/about', icon: <InfoIcon sx={{ mr: 1 }} />, label: 'About' },
-        { path: '/courses', icon: <SchoolIcon sx={{ mr: 1 }} />, label: 'Courses' },
-        { path: '/recipes', icon: <RecipeIcon sx={{ mr: 1 }} />, label: 'Recipes' },
+        { path: '/courses', icon: <Collections sx={{ mr: 1 }} />, label: 'Album' },
+        { path: '/recipes', icon: < Theaters sx={{ mr: 1 }} />, label: 'Klaus' },
     ];
 
     if (isAuthenticated) {

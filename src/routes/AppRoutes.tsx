@@ -5,6 +5,7 @@ import About from '../pages/About';
 import Courses from '../pages/Courses';
 import Recipes from '../pages/Recipes';
 import AddRecipe from '../pages/AddRecipe';
+import Example from '../pages/Example';
 const AppRoutes = () => {
   return (
     <Routes>
@@ -14,6 +15,7 @@ const AppRoutes = () => {
       <Route path="courses" element={<Courses />} />
       <Route path="recipes" element={<Recipes />} />
       <Route path="add-recipe" element={<AddRecipe />} />
+      <Route path="example" element={<Example />} />
     </Route>
   </Routes>
   );
