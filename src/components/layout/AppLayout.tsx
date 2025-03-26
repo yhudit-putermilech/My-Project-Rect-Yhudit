@@ -2,7 +2,6 @@ import { Outlet } from 'react-router-dom';
 import { Box, Container } from '@mui/material';
 import { useUserContext } from '../../context/UserContext';
 import AppHeader from './AppHeader';
-//מבנה כללי של האפליקציה
 const AppLayout = () => {
     const { state: { isAuthenticated }, dispatch } = useUserContext();
 

@@ -2,7 +2,6 @@ import { TextField, Box, Button } from '@mui/material';
 import { UseFormRegister, FieldErrors, UseFormWatch } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import IngredientList from './IngredientList';
-//פונקציה שיורת /מעדכנת מתכון
 interface RecipeFormProps {
   register: UseFormRegister<any>;
   watch: UseFormWatch<any>;
@@ -12,7 +11,6 @@ interface RecipeFormProps {
   isSubmitting: boolean;
   onSubmit: (e: React.FormEvent) => void;
 }
-  
 const RecipeForm = ({ 
   register, 
   watch,

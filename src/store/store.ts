@@ -1,6 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
 import recipeReducer from './recipeSlice';
-//מגדיר מצב של אפליקציה
 export const store = configureStore({
     reducer: {
         recipes: recipeReducer

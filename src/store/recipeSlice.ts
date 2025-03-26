@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Recipe } from '../types/Recipe';
-//ניהול מצב
 interface RecipeState {
     recipes: Recipe[];
     selectedRecipe: Recipe | null;

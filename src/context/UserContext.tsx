@@ -1,6 +1,5 @@
 import { createContext, ReactNode, useContext, useReducer } from "react";
 import userReducer, { initialState, UserState, UserAction } from "../reducer/UserReducer";
-//יוצר קשר בין הדפים לראוטר
 const UserContext = createContext<{
     state: UserState;
     dispatch: React.Dispatch<UserAction>;

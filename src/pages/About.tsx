@@ -9,15 +9,15 @@ const About = () => {
             'orange', 'pink', 'cyan', 'magenta', 'lime', 
             'brown', 'teal', 'navy', 'violet', 'gold', 
             'silver', 'black', 'indigo', 'coral'
-        ]; // מערך עם 20 צבעים
+        ];    
         let index = 0;
 
         const interval = setInterval(() => {
             setColor(colors[index]);
             index = (index + 1) % colors.length;
-        }, 500); // שינוי צבע כל חצי שנייה
+        }, 500); 
 
-        return () => clearInterval(interval); // ניקוי ה-interval כשקומפוננטה מתנתקת
+        return () => clearInterval(interval);  
     }, []);
 
     return (
@@ -28,53 +28,3 @@ const About = () => {
 }
 
 export default About;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*import { Typography, Box, Paper } from '@mui/material';
-import { Info as InfoIcon } from '@mui/icons-material';
-
-const About = () => {
-  return (
-    <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
-      <Box sx={{ 
-        display: 'flex', 
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 2
-      }}>
-        <InfoIcon sx={{ fontSize: 60, color: 'primary.main' }} />
-        <Typography variant="h2">אודות האתר שלנו</Typography>
-      </Box>
-    </Paper>
-  );
-};
-
-export default About;
-*/
-

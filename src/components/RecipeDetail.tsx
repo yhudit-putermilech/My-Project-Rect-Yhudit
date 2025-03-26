@@ -1,6 +1,5 @@
 import { Box, Typography, Divider, List, ListItem, ListItemText } from '@mui/material';
 import type { Recipe } from '../types/Recipe';
-//הצגת מתכון
 interface RecipeDetailProps {
   recipe: Recipe;
 }

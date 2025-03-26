@@ -1,17 +1,13 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import { useState } from 'react';import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Paper, Box, Typography } from '@mui/material';
 import {  RestaurantMenu as RecipeIcon } from '@mui/icons-material';
 import { AppDispatch } from '../store/store';
 import { fetchRecipes } from '../store/recipeSlice';
-import { useUserContext } from '../context/UserContext';
-import axios from 'axios';
+import { useUserContext } from '../context/UserContext';import axios from 'axios';
 import RecipeForm from '../components/RecipeForm';
-//מוסיף מתכון חדש לאתר
 const recipeSchema = yup.object().shape({
   title: yup
     .string()
@@ -45,9 +41,7 @@ const AddRecipe = () => {
   const navigate = useNavigate();
   const { state: { user } } = useUserContext();
   const {
-    register,
-    watch,
-    handleSubmit,
+    register, watch, handleSubmit,
     formState: { errors, isSubmitting }
   } = useForm<FormInputs>({
     resolver: yupResolver(recipeSchema),
@@ -57,15 +51,13 @@ const AddRecipe = () => {
     try {
       if (!user?.id) {
         alert('You must be logged in to add a recipe');
-        return;
-      }
+        return;}
       const recipeData = {
         title: data.title,
         description: data.description,
         instructions: data.instructions,
         ingredients,
-        products: []
-      };
+        products: [] };
       await axios.post(
         'http://localhost:3000/api/recipes',
         recipeData,
@@ -73,19 +65,14 @@ const AddRecipe = () => {
           headers: {
             'Content-Type': 'application/json',
             'user-id': user.id.toString()
-          }
-        }
-      );
+          }}  );
       dispatch(fetchRecipes());
       navigate('/recipes');
     } catch (error: any) {
       if (error.response?.status === 401) {
         alert('Your session has expired. Please login again.');
       } else {
-        alert(error.response?.data?.message || 'Failed to add recipe');
-      }
-    }
-  };
+        alert(error.response?.data?.message || 'Failed to add recipe');} } };
   return (
     <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
       <Box sx={{
@@ -108,6 +95,5 @@ const AddRecipe = () => {
         onSubmit={handleSubmit(onSubmit)}
       />
     </Paper>
-  );
-};
+  );};
 export default AddRecipe;

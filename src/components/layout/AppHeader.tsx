@@ -2,15 +2,12 @@ import { AppBar, Toolbar, Box, Container, Button } from '@mui/material';
 import Login from '../Login';
 import UserProfile from '../UserProfile';
 import NavList from './NavList';
-//Header  מציג את
 interface AppHeaderProps {
     isAuthenticated: boolean;
     onLogout: () => void;
 }
-
 const AppHeader = ({ isAuthenticated, onLogout }: AppHeaderProps) => {
     return (
-        //<AppBar position="static" color="default">
         <AppBar position="static" sx={{ backgroundColor: '#f48fb1' }}>
             <Container maxWidth="lg">
                 <Toolbar sx={{

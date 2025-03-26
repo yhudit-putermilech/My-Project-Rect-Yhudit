@@ -5,7 +5,6 @@ import About from '../pages/About';
 import Courses from '../pages/Courses';
 import Recipes from '../pages/Recipes';
 import AddRecipe from '../pages/AddRecipe';
-//ראוטר
 const AppRoutes = () => {
   return (
     <Routes>
@@ -19,5 +18,4 @@ const AppRoutes = () => {
   </Routes>
   );
 };
-
 export default AppRoutes;

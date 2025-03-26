@@ -10,15 +10,15 @@ const Home = () => {
       'orange', 'pink', 'cyan', 'magenta', 'lime',
       'brown', 'teal', 'navy', 'violet', 'gold',
       'silver', 'black', 'indigo', 'coral'
-    ]; // מערך עם 20 צבעים
+    ];  
     let index = 0;
 
     const interval = setInterval(() => {
       setColor(colors[index]);
       index = (index + 1) % colors.length;
-    }, 300); // משנים צבע כל שנייה
+    }, 300); 
 
-    return () => clearInterval(interval); // לנקות את ה-intervall כשקומפוננטה מתנתקת
+    return () => clearInterval(interval);   
   }, []);
 
   return (
@@ -44,81 +44,3 @@ const Home = () => {
 }
 
 export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//import { Typography, Box, Paper } from '@mui/material';
-//import { Home as HomeIcon } from '@mui/icons-material';
-/* 
-const Home = () => {
-  return (
-    <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
-      <Box sx={{ 
-        display: 'flex', 
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 2
-      }}>
-        <HomeIcon sx={{ fontSize: 60, color: 'primary.main' }} />
-
-        <div>😘😜😘🤩🤗😎🤗😚😘😜😝😂🤣😘😍🤣🥰🤩🤗🤗😚😘😜😝😂🤣😍🤣😉😎😄🥰🤩🤗🤗😚😝😂🤣😍🤣😉😎😄🥰🤩🤗🤗😚</div>
-        <Typography variant="h1">ברוכים הבאים</Typography>
-        <div>😘😜😘😉😎🤩🤗🤗😚😘😜😝😂🤣😍🤣🥰🤩🤗🤗😚😘😜😝😂🤣😍🤣😉😎😄🥰🤩🤗🤗😚😝😂🤣😍🤣😉😎😄🥰🤩🤗🤗😚</div>
-      </Box>
-    </Paper>
-  );
-};
-
-export default Home;
-*/
