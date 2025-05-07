@@ -1,4 +1,3 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom'; // Outlet מציג את התוכן של העמוד הנוכחי
 import Header from './header';
 
