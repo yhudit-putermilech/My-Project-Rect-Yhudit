@@ -1,19 +1,17 @@
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { UserProvider } from './context/UserContext';
-import { store } from './store/store';
-import AppRoutes from './routes/AppRoutes';
+import './App.css'
+import { UserProvider } from './useContext';
+import { Outlet } from 'react-router-dom';
 
-const App = () => {
+function App() {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <UserProvider>
-          <AppRoutes />
-        </UserProvider>
-      </BrowserRouter>
-    </Provider>
+    <>     
+    <UserProvider>
+      <>     
+        <Outlet /> 
+      </>
+     </UserProvider>
+    </>
   );
-};
+}
 
-export default App;
+export default App
