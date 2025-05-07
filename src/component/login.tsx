@@ -5,11 +5,9 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { AppDispatch } from "./store";
-import { loginUser,loginWithGoogle } from "../slices/userLoginSlice ";
+import { loginUser } from "../slices/userLoginSlice ";
 import { loginSuccess } from "../slices/userSlice";
-import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
-//import { getAlbums } from "./albumReducer";
 
 
 const StyledCard = styled(Card)(() => ({
